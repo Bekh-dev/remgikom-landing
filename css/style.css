@@ -2,11 +2,12 @@
 @import url('reset.css');
 
 /*Fonts--------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Raleway:regular,500,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway:regular,500,600&display=swap&subset=cyrillic-ext);
 
 /*Переменные---------------------------------------*/
 :root {
 	--main-color: #13151a;
+	--blue-color: #0459e0;
 	--main-fonts: Raleway;
 }
 
@@ -28,9 +29,9 @@ body {
 
 /*Контейнер----------------------------------------*/
 [class*='_container'] {
-	max-width: 1200px;
+	max-width: 1240px;
 	margin: 0 auto;
-	padding: 0px 15px;
+	padding: 0px 20px;
 }
 /* PC */
 @media (max-width: 1057px) {
@@ -48,5 +49,107 @@ body {
 @media (max-width: 767.98px) {
 	[class*='_container'] {
 		max-width: 100%;
+	}
+}
+
+/*Header-------------------------------------------*/
+.header {
+}
+.header__top {
+}
+.header__bottom {
+	border-bottom: 2px solid #f2f2f2;
+}
+
+.top-header {
+	background-color: #f2f2f2;
+	padding: 15px 0px;
+	font-size: 14px;
+}
+.top-header__container {
+	display: flex;
+	justify-content: space-between;
+}
+.top-header__address {
+	color: #5a5a5a;
+}
+.top-header__contacts {
+}
+.top-header__contact {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: inherit;
+}
+.top-header__contact:not(:last-child) {
+	margin: 0px 20px 0px 0px;
+}
+.top-header__contact_num {
+}
+.top-header__contact_email {
+}
+
+.bottom-header {
+	padding: 15px 0px;
+}
+.bottom-header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bottom-header__logo {
+}
+.bottom-header__menu {
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+.menu__body {
+}
+.menu__list {
+	display: flex;
+	gap: 50px;
+}
+.menu__item {
+}
+.menu__link {
+	color: inherit;
+	font-weight: 600;
+	transition: all 0.4s ease 0s;
+}
+.menu__link._act {
+	color: #0459e0;
+}
+@media (any-hover: hover) {
+	.menu__link:hover {
+		color: #0459e0;
+	}
+}
+.menu__icon {
+}
+
+.icon-menu {
+}
+.icon-menu__line {
+}
+.bottom-header__btn {
+}
+
+.btn {
+	display: inline-flex;
+	border-radius: 24px;
+	padding: 12px 40px;
+	box-shadow: 0 0 6px 0 rgba(0, 102, 255, 0.25);
+	background: #0459e0;
+	font-weight: 600;
+	color: #fff;
+	transition: all 0.4s ease 0s;
+}
+@media (any-hover: hover) {
+	.btn:hover {
+		box-shadow: 0 0 6px 0 rgba(0, 102, 255, 0.5);
+		background: #3d88fe;
 	}
 }
